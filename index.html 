@@ -1,0 +1,95 @@
+ <!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Simple HubSpot social share script</title>
+ </head>
+ <body>
+ 
+ 	<h1>Simple Social Share Script </h1>
+
+ 	<div class="sharingmodule">
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '436735436512159',
+          xfbml      : true,
+          version    : 'v2.4'
+        });
+    
+        // ADD ADDITIONAL FACEBOOK CODE HERE
+      };
+    
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
+    
+    <ul id="ss-module">
+      <li>
+        <span class="share">SHARE</span>
+      </li>
+      <li class="twitter">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="hubspot" data-url="{{ content.absolute_url }}" counturl="{{ content.absolute_url }}">Tweet</a> 
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src ="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitt er-wjs");</script>
+      </li>
+      <li class="facebook">
+          <a class="fb-like" data-href="{{ content.absolute_url }}" data-layout="box_count" data-action="like" data-show-faces="true" data-share="false"> </a>
+      </li>
+      <li class="linkedin">
+        <script src="//platform.linkedin.com/in.js" type="text/javascript"></script> 
+        <script type="IN/Share" data-url="{{ content.absolute_url }}" data-counter="top"></script>
+      </li>
+      <li class="mail">
+        <a href="mailto:?subject=I wanted you to see this Struto blog post&amp;body=Check out this site {{ content.absolute_url }}." title="Share by email" >
+            <img src="http://cdn2.hubspot.net/hubfs/383440/ST_AES_Images/share-mailjpg.jpg" alt="Email" />
+        </a>
+      </li>
+    </ul>
+	</div>
+
+ </body>
+
+
+<!-- Inline Stylesheet for testing purposes -->
+<style type="text/css">
+	
+.sharingmodule { 
+    float: left;
+    width: 70px;
+}
+
+.sharingmodule ul#ss-module {  
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 2px solid rgb(221, 78, 12);
+    border-radius: 4px;
+    padding: 0;
+    margin: 45px  0 0;
+}
+
+.sharingmodule ul#ss-module li {
+    display: block;
+    margin: 5px auto;
+    list-style-type: none;
+    text-align: center;
+}
+
+.sharingmodule ul#ss-module li span.share {
+    color: #ccc;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    margin-bottom: 10px
+}
+
+</style>
+
+
+</html>
