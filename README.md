@@ -3,5 +3,5 @@
 
 ### A simple Hubspot social share
 This is a mere html script that gives you the following custom social share blog to make use of within your HubSpot portal. 
-![Image of Yaktocat](https://www.dropbox.com/s/0udpwq33hstxaut/social-sharing.png?dl=0)
+![Image of Yaktocat](http://res.cloudinary.com/dnleel2fb/image/upload/v1443624573/social-sharing_jgofcl.png)
 **Please note that it does not keep or store any stats. It is as basic as they come...**
